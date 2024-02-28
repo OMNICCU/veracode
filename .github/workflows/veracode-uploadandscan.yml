@@ -1,6 +1,12 @@
 name: Veracode Static Analysis
-on: workflow_dispatch
-    
+
+on:
+  workflow_call:
+    inputs:
+      policy_name:
+        required: true
+        type: string
+        
 jobs:
   static_analysis:
     name: Static Analysis
