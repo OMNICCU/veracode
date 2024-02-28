@@ -39,3 +39,9 @@ jobs:
           veracode_policy_name: ${{ inputs.policy_name }}
           file: ./veracode_artifact_directory/${{ env.veracode_artifact }}
           fail_build: true
+
+      # configure Veracode Static Analysis Pipeline Scan and SARIF import
+      # from https://github.com/marketplace/actions/veracode-static-analysis-pipeline-scan-and-sarif-import
+      - name: Veracode Static Analysis Pipeline Scan and SARIF import
+        uses: veracode/veracode-pipeline-scan-results-to-sarif@v1.0.9
+            
