@@ -14,7 +14,7 @@ on:
             java-gradle-policy-scan, 
             source-code-policy-scan, 
             go-policy-scan,
-            go-static-scan]
+            static-scan]
 
 jobs:
   register:
