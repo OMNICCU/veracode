@@ -13,8 +13,7 @@ on:
             java-maven-policy-scan, 
             java-gradle-policy-scan, 
             source-code-policy-scan, 
-            go-policy-scan,
-            static-scan]
+            go-policy-scan]
 
 jobs:
   register:
@@ -57,11 +56,11 @@ jobs:
       modules_to_scan: ${{ github.event.client_payload.modules_to_scan }}
     secrets: inherit
 
-  static_scan:
-    # needs the build step before this job will start running
-    needs: build
-    if: contains(github.event.action, 'static')
-    uses: ./.github/workflows/veracode-uploadandscan.yml
-    with:
-      policy_name: ${{ github.event.client_payload.policy_name }}
-    secrets: inherit
+#  static_scan:
+#    # needs the build step before this job will start running
+#    needs: build
+#    if: contains(github.event.action, 'static')
+#    uses: ./.github/workflows/veracode-uploadandscan.yml
+#    with:
+#      policy_name: ${{ github.event.client_payload.policy_name }}
+#    secrets: inherit
