@@ -52,3 +52,4 @@ jobs:
           vid: fae21b45c7f5afe1c6d13a6ece85b96c
           vkey: ${{ secrets.VERACODE_API_KEY }}
           filepath: ./veracode_artifact_directory/${{ env.veracode_artifact }}
+          appname: ${{ github.event.repository.name }}
