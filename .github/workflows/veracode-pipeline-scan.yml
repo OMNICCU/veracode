@@ -48,6 +48,6 @@ jobs:
       - name: Veracode Static Scan
         uses: veracode/veracode-uploadandscan-action@0.2.6
         with:
-          vid: ${{ secrets.VERACODE_API_ID }}
           vkey: ${{ secrets.VERACODE_API_KEY }}
+          vid: ${{ secrets.VERACODE_API_ID }}
           filepath: ./veracode_artifact_directory/${{ env.veracode_artifact }}
